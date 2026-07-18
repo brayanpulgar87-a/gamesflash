@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamesFlash | Descarga Juegos Livianos, ISOs y Programas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="fondo-animado">
+
+    <!-- BARRA SUPERIOR ROJA CON ANIMACIÓN DE MARQUESINA -->
+    <div class="barra-anuncio">
+        <div class="texto-movimiento">
+            <span>🔥 ¡Aviso importante: Se ha agregado Halo Custom Edition y Windows 10 LTSC hoy! 🔥</span>
+        </div>
+    </div>
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR CON VERSIÓN Y CONTADOR -->
+    <nav class="barra-navegacion">
+        <div>
+            <span class="logo-texto">GamesFlash</span>
+            <span class="version-web">v1.0.0</span>
+            <span id="contador-total" class="contador-web">Cargando...</span>
+        </div>
+        <!-- REEMPLAZA CON TU LINK DE GOOGLE FORMS DE CONTACTO -->
+        <a href="https://forms.gle/SsacRkabbFLAbGzZ6" target="_blank" class="enlace-nav">Sugerencias / Contacto</a>
+    </nav>
+
+    <!-- ENCABEZADO Y BUSCADOR -->
+    <header>
+        <h1>GamesFlash</h1>
+        <input type="text" id="buscador" placeholder="Escribe el juego, ISO o programa que buscas...">
+        
+        <!-- BOTONES DE CATEGORÍAS -->
+        <div class="contenedor-filtros">
+            <button class="btn-filtro active" data-target="todos">Todos</button>
+            <button class="btn-filtro" data-target="accion">Acción</button>
+            <button class="btn-filtro" data-target="mundo-abierto">Mundo Abierto</button>
+            <button class="btn-filtro" data-target="supervivencia">Supervivencia</button>
+            <button class="btn-filtro" data-target="windows">Windows ISO</button>
+            <button class="btn-filtro" data-target="programas">Programas</button>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR PRINCIPAL DE TARJETAS (CASILLAS) -->
+    <main class="contenedor-juegos">
+
+        <!-- JUEGO 1: GTA San Andreas (Mundo Abierto) -->
+        <div class="tarjeta-juego" data-categoria="mundo-abierto">
+            <div class="contenedor-etiquetas">
+                <span class="etiqueta azul">Clásico</span>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB96GKoKgdp0SCr_7t32Kj9NPoYk0JWdpVJxyFJAGtCg&s=10" alt="GTA SA">
+            <h3>GTA San Andreas</h3>
+            <p>Requisitos: 2GB RAM | Intel Core 2 Duo</p>
+            <div class="bloque-botones">
+                <div class="contenedor-arquitectura">
+                    <select id="selector-gta" class="selector-estilo">
+                        <option value="TU_LINK_DE_MEGA_REAL">Descargar por Mega</option>
+                        <option value="TU_LINK_DE_MEDIAFIRE_REAL">Descargar por MediaFire</option>
+                    </select>
+                    <button onclick="descargarISO('selector-gta')" class="btn-descargar-iso">Descargar Juego</button>
+                </div>
+                <a href="https://forms.gle/SsacRkabbFLAbGzZ6" class="btn-reportar" target="_blank">⚠️ Reportar Link</a>
+            </div>
+        </div>
+
+        <!-- JUEGO 2: Minecraft (Supervivencia y Mundo Abierto) -->
+        <div class="tarjeta-juego" data-categoria="supervivencia, mundo-abierto">
+            <div class="contenedor-etiquetas">
+                <span class="etiqueta verde">Pocos Requisitos</span>
+            </div>
+            <img src="https://i.pinimg.com/236x/db/ff/fb/dbfffbfe481b1383a08564842ef99899.jpg" alt="Minecraft">
+            <h3>Minecraft Optimizado</h3>
+            <p>Requisitos: 4GB RAM | Intel HD Graphics</p>
+            <div class="bloque-botones">
+                <a href="https://mediafire.com" class="btn-descargar" target="_blank">Descargar por MediaFire</a>
+                <a href="https://forms.gle/SsacRkabbFLAbGzZ6" class="btn-reportar" target="_blank">⚠️ Reportar Link</a>
+            </div>
+        </div>
+
+        <!-- JUEGO 3: Left 4 Dead 2 (Acción) -->
+        <div class="tarjeta-juego" data-categoria="accion">
+            <div class="contenedor-etiquetas">
+                <span class="etiqueta rojo">Popular</span>
+            </div>
+            <img src="https://tse2.mm.bing.net/th/id/OIP.50P3htgX0RwVaq_NK-jL5gHaEx?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Left 4 Dead 2">
+            <h3>Left 4 Dead 2</h3>
+            <p>Requisitos: 2GB RAM | Gráficos Integrados</p>
+            <div class="bloque-botones">
+                <a href="TU_LINK_DE_DRIVE_REAL" class="btn-descargar" target="_blank">Descargar por Google Drive</a>
+                <a href="https://forms.gle/SsacRkabbFLAbGzZ6" class="btn-reportar" target="_blank">⚠️ Reportar Link</a>
+            </div>
+        </div>
+
+        <!-- JUEGO 4: Halo Custom Edition (Acción y Mundo Abierto) -->
+        <div class="tarjeta-juego" data-categoria="accion, mundo-abierto">
+            <div class="contenedor-etiquetas">
+                <span class="etiqueta azul">Súper Liviano</span>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTymHv1D_na8s2PsGV4iOfjOa3ZEkyTetahT33plK_RZA&s=10" alt="Halo">
+            <h3>Halo Custom Edition</h3>
+            <p>Requisitos: 1GB RAM | 128MB VRAM | Intel Pentium 4</p>
+            <div class="bloque-botones">
+                <a href="https://www.mediafire.com/file/tj06skbiz6mvx8h/HALO1.ISO/file" class="btn-descargar" target="_blank">Descargar Juego</a>
+                <a href="https://forms.gle/SsacRkabbFLAbGzZ6" class="btn-reportar" target="_blank">⚠️ Reportar Link</a>
+            </div>
+        </div>
+
+        <!-- SISTEMA OPERATIVO: Windows 10 (Windows ISO) -->
+        <div class="tarjeta-juego" data-categoria="windows">
+            <div class="contenedor-etiquetas">
+                <span class="etiqueta rojo">Nuevo</span>
+                <span class="etiqueta azul">Sistema</span>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR2W9ojCMe8oUdndQdIh5KZDfgCGzWE3lRVhI06zuAqg&s=10" alt="Windows 10">
+            <h3>Windows 10 LTSC Súper Optimizado</h3>
+            <p>Requisitos: 1GB RAM (32-bit) | 2GB RAM (64-bit)</p>
+            <div class="bloque-botones">
+                <div class="contenedor-arquitectura">
+                    <select id="selector-bits-w10" class="selector-estilo">
+                        <option value="TU_LINK_WIN10_32BITS_REAL">Descargar 32 Bits (x86)</option>
+                        <option value="TU_LINK_WIN10_64BITS_REAL">Descargar 64 Bits (x64)</option>
+                    </select>
+                    <button onclick="descargarISO('selector-bits-w10')" class="btn-descargar-iso">Descargar ISO</button>
+                </div>
+                <a href="https://forms.gle/SsacRkabbFLAbGzZ6" class="btn-reportar" target="_blank">⚠️ Reportar Link</a>
+            </div>
+        </div>
+
+        <!-- PROGRAMA: WinRAR (Programas) -->
+        <div class="tarjeta-juego" data-categoria="programas">
+            <div class="contenedor-etiquetas">
+                <span class="etiqueta verde">Esencial</span>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9uNs_JO5qvp1JD4FV1B7NpJ6_8b4mFB91sMCgAQG9vg&s=10" alt="WinRAR">
+            <h3>WinRAR Full Toolkit</h3>
+            <p>Requisitos: Elige la versión de tu sistema</p>
+            <div class="bloque-botones">
+                <div class="contenedor-arquitectura">
+                    <select id="selector-winrar" class="selector-estilo">
+                        <option value="TU_LINK_WINRAR_32BITS_REAL">Descargar 32 Bits (x86)</option>
+                        <option value="TU_LINK_WINRAR_64BITS_REAL">Descargar 64 Bits (x64)</option>
+                    </select>
+                    <button onclick="descargarISO('selector-winrar')" class="btn-descargar-iso">Descargar Programa</button>
+                </div>
+                <a href="https://forms.gle/SsacRkabbFLAbGzZ6" class="btn-reportar" target="_blank">⚠️ Reportar Link</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA CON CRÉDITOS Y VERSIÓN -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 GamesFlash. Todos los derechos reservados. <span class="version-footer">(Versión 1.0.0)</span></p>
+        <p>Creado por <span class="credito-autor">Yeinfer Anderson</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
